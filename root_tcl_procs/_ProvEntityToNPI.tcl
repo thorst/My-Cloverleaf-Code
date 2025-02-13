@@ -136,7 +136,7 @@ proc _ProvEntityToNPI {segList} {
         WHERE mdm.Provider_xREF.ss_key3 in ($ProvLookupList)
         And Provider_xREF.ss_active_Code=1
         And Provider_xREF.src_sys_skey_Code=2
-        And Provider_xREF.mProviderCode_Code <> 'WSH9999999';"
+        And Provider_xREF.mProviderCode_Code <> '9999999';"
 
         set server(server) ""
         set server(user) ""

@@ -315,7 +315,7 @@ proc tps_FR_EPIC { args } {
                     _lextend "newMrnList" 4
                     set subMrnfld [lindex $newMrnList 4]
 
-                    #Grab the WSH MRN from the list and move it.
+                    #Grab the  MRN from the list and move it.
                     if {[string equal $subMrnfld ""]} {
                         set subMrnList [lreplace $subMrnList $index $index]
                         set subMrnList [linsert $subMrnList 0 $mrnList]
@@ -451,7 +451,7 @@ proc tps_MERGE_FR_EPIC { args } {
                     _lextend "newMrnList" 4
                     set subMrnfld [lindex $newMrnList 4]
 
-                    #Grab the WSH MRN from the list and move it.
+                    #Grab the  MRN from the list and move it.
                     if {[string equal $subMrnfld ""]} {
                         set subMrnList [lreplace $subMrnList $index $index]
                         set subMrnList [linsert $subMrnList 0 $mrnList]

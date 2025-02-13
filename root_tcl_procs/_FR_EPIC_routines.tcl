@@ -103,13 +103,13 @@ proc _FR_EPIC_kill {segList {field_delim "|"} {comp_delim "^"} {rep_delim "~"}} 
     if {$segIndex>=0} {
         set fldList [split [lindex $segList $segIndex] $field_delim]
 
-        # get the PID-3 mrn, split, and search for WSHMRN label
-        # you must split it for lsearch to work, else doesn't work when WSHMRN is first and EID second
+        # get the PID-3 mrn, split, and search for MRN label
+        # you must split it for lsearch to work, else doesn't work when RN is first and EID second
         set mrn [lindex $fldList 3]
         set mrnList [split $mrn $rep_delim]
         set index [lsearch $mrnList "*$comp_delim"]
 
-        # Kill if no WSHMRN - calling program can kill message
+        # Kill if no RN - calling program can kill message
         if {$index == -1} {
             return true
         }

@@ -138,7 +138,7 @@ if 0 {
     Script:
     EPIC_GetMRN listName ?mrntype?
     listName is the entire PID-3 field
-    mrntype is optional and defaults to WSHMRN
+    mrntype is optional and defaults to MRN
 
     Description:
     Pull out the desired MRN from the EPIC transaction field
@@ -154,7 +154,7 @@ if 0 {
     05/20/2016 -  -Initial version
 }
 #
-proc EPIC_GetMRN {mrnList {mrntype "WSHMRN"} {comp_delim "^"} {rep_delim "~"}} {
+proc EPIC_GetMRN {mrnList {mrntype "MRN"} {comp_delim "^"} {rep_delim "~"}} {
     foreach fld [split $mrnList $rep_delim] {
         set newList [split $fld $comp_delim]
         if {[lindex $newList 4]==$mrntype} {
